@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
+
+  <title>GEINZ</title>
+</head>
+
+<body>
+  <section class="primera-parte">
+    <div class="menu-hamburgesa">
+      <div class="barra br1" id="l1"></div>
+      <div class="barra br2" id="l2"></div>
+      <div class="barra br3" id="l3"></div>
+    </div>
+
+    <div class="contenidomenu">
+      <div class="contenido-letras">
+        <a href="index.html">
+          <p id="inicio">Inicio</p>
+        </a>
+        <a href="#nosotrosid">
+          <p id="nosotros">Nostros</p>
+        </a>
+        <a href="#informacion">
+          <p id="info">Informacion</p>
+        </a>
+        <a href="#plantillasid">
+          <p id="plantillas">plantillas</p>
+        </a>
+        <a href="#planesid">
+          <p id="planes">Planes</p>
+        </a>
+      </div>
+    </div>
+    <script>
+      var menuItems = document.querySelectorAll(".barra");
+      var apartado = document.querySelector(".contenidomenu");
+      var l1 = document.getElementById("l1");
+      var l2 = document.getElementById("l2");
+      var l3 = document.getElementById("l3");
+
+      menuItems.forEach(function (menu) {
+        menu.addEventListener("click", function () {
+          var isActive = l1.classList.contains("active");
+
+          if (isActive) {
+            l1.classList.remove("active");
+            l2.classList.remove("active");
+            l3.classList.remove("active");
+            l1.style.backgroundColor = "white";
+            l3.style.backgroundColor = "white";
+            apartado.style.zIndex = -0;
+          } else {
+            l1.classList.add("active");
+            l2.classList.add("active");
+            l3.classList.add("active");
+            l1.style.backgroundColor = "white";
+            l3.style.backgroundColor = "white";
+            apartado.style.zIndex = 2;
+          }
+
+          apartado.classList.toggle("mostraapartado");
+        });
+      });
+
+      var inicio = document.getElementById('inicio');
+      var nosotros = document.getElementById('nosotros');
+      var info = document.getElementById('info');
+      var plantillas = document.getElementById('plantillas');
+      var planes = document.getElementById('planes');
+
+      var apartadomenu = document.querySelector(".contenidomenu");
+
+      inicio.addEventListener('click', function () {
+        apartadomenu.classList.remove("mostraapartado")
+        l1.classList.remove("active");
+        l2.classList.remove("active");
+        l3.classList.remove("active");
+      });
+      nosotros.addEventListener('click', function () {
+        apartadomenu.classList.remove("mostraapartado")
+        l1.classList.remove("active");
+        l2.classList.remove("active");
+        l3.classList.remove("active");
+      });
+      info.addEventListener('click', function () {
+        apartadomenu.classList.remove("mostraapartado")
+        l1.classList.remove("active");
+        l2.classList.remove("active");
+        l3.classList.remove("active");
+      });
+      plantillas.addEventListener('click', function () {
+        apartadomenu.classList.remove("mostraapartado")
+        l1.classList.remove("active");
+        l2.classList.remove("active");
+        l3.classList.remove("active");
+      });
+      planes.addEventListener('click', function () {
+        apartadomenu.classList.remove("mostraapartado")
+        l1.classList.remove("active");
+        l2.classList.remove("active");
+        l3.classList.remove("active");
+      });
+    </script>
+
+    <div class="logo">
+      <h1>Geinz</h1>
+    </div>
+
+    <section class="palabras-principales">
+      <div class="slider">
+        <h1>Potencia tu crecimineto online</h1>
+      </div>
+      <p class="texto-parrafo">
+        Somos expertos en la creación de sitios web que impulsan el
+        crecimiento de tu negocio. Nuestros planes personalizados y atractivos
+        están diseñados para ayudarte a destacar en línea y alcanzar tus
+        objetivos comerciales.
+      </p>
+      <div class="botones">
+        <a href="#plantillas">
+          <button class="boton1">Plantillas</button>
+        </a>
+        <a href="#planes">
+          <button class="precio-botton">Planes y Precios</button>
+        </a>
+      </div>
+    </section>
+
+    <div class="scroll-dow">
+      <img src="img/scrooldow.png" alt="" />
+    </div>
+  </section>
+
+  <section class="segunda-parte">
+    <div class="titulos-segunda">
+      <h1>GEINZ</h1>
+      <p>Crea-Diseña-Crece</p>
+    </div>
+  </section>
+
+  <section class="informacion">
+    <section class="responsivedesing">
+      <div class="title">
+        <h1 class="textomostra">
+          El sueño es el punto de partida de toda gran empresa
+        </h1>
+        <p>Construimos sitios web que reflejan la esencia de tu negocio.</p>
+      </div>
+
+      <div class="card1-informacion">
+        <img src="img/geinzresponsive.png" alt="" />
+        <h1 class="textomostra">Somos expertos en responsive desing</h1>
+        <div class="bottom-info">
+          <button>Ver mas</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo">
+      <div class="title-seo">
+        <img src="img/seo-logo.png" alt="" />
+        <h1 class="textomostra">
+          Nos especializamos a que tu marca llege a todas partes
+        </h1>
+        <div class="bottom-info">
+          <button>Ver mas</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="animaciones">
+      <div class="title-animaciones">
+        <img src="img/diseño-animaciones.png" alt="" />
+        <h1 class="textomostra">
+          Nos especializamos en animaciones expertas
+        </h1>
+        <div class="bottom-info">
+          <button>Ver mas</button>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!--   <section class="campaña">
+    <div class="contenedor-vistas">
+      <div class="primera-part">
+        <h1 id="years" class="textomostra">+0</h1>
+        <p>años de Experiencia</p>
+      </div>
+      <div class="segunda-part">
+        <h1 id="platillas" class="textomostra">+0</h1>
+        <p>Plantillas de referencia</p>
+      </div>
+      <div class="tercera-part">
+        <h1 id="optimizacion" class="textomostra">+0</h1>
+        <p>optimizacion</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!--   <section class="platillas">
+    <div class="title-plantillas">
+      <p >
+        En Geinz, descubrirás una exquisita selección de las plantillas más
+        modernas y actualizadas del mercado
+      </p>
+      <div class="contenedor-deimg">
+        <img src="img/sitio5.png" alt="" />
+        <img src="img/sitio2.png" alt="" />
+        <img src="img/sitio1.png" alt="" />
+        <img src="img/sitio3.png" alt="" />
+        <img src="img/sitio4.png" alt="" />
+        <img src="img/sitio6.png" alt="" />
+      </div>
+
+      <div class="contenedor-deimg2">
+        <img src="img/sitio5.png" alt="" />
+        <img src="img/sitio2.png" alt="" />
+        <img src="img/sitio1.png" alt="" />
+        <img src="img/sitio3.png" alt="" />
+        <img src="img/sitio4.png" alt="" />
+        <img src="img/sitio6.png" alt="" />
+      </div>
+    </div>
+  </section> -->
+
+  <!--  <section class="responsive">
+    <div class="planes-title">
+      <p>
+        En geinz nos espezializamos en el responsive desing y que el usuario
+        que visite tu sitio web tenga la major Experiencia
+      </p>
+      <div class="contenedor-movil">
+        <h1>Movil fersti</h1>
+        <div class="movil-informacion">
+          <h2>
+            crece tu marca con movilfrist ya que contamos con una exelente
+            resposividad en dispositivos
+          </h2>
+          <img src="img/geinz-celular.png" alt="" />
+        </div>
+      </div>
+
+      <div class="contenedor-tablet">
+        <div class="title-tablet">
+          <h1>tablet first</h1>
+        </div>
+        <div class="contenedor-tablets">
+          <img src="img/geinz-talbet.png" alt="">
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut commodi, distinctio molestias ipsum sit ullam
+            iste laborum placeat iure sequi autem at ea eius odio ex totam ducimus natus accusantium.</h2>
+        </div>
+      </div>
+
+
+      <div class="contenedor-laptop">
+        <div class="title-laptop">
+          <h1>laptop first</h1>
+        </div>
+        <div class="contenedor-laptop">
+          <img src="img/geinz-laptop.png" alt="">
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut commodi, distinctio molestias ipsum sit ullam
+            iste laborum placeat iure sequi autem at ea eius odio ex totam ducimus natus accusantium.</h2>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="Palabras">
+    <div class="palabas-section">
+      <h1>Geinz</h1>
+      <p>Potencia tu marca </p>
+    </div>
+  </section>
+
+  <section class="background">
+    <section class="nosotros" id="nosotrosid">
+      <div class="texto-nosotros">
+        <h1 class="textomostra">Quienes somos</h1>
+      </div>
+      <div class="nosotros-texto">
+        <p class="textomostra">
+          Geinz: Potenciando tu presencia en línea. Somos una empresa dedicada al crecimiento y éxito de tu marca en el
+          mundo digital. Nuestro enfoque es proporcionar soluciones innovadoras y personalizadas a través de la creación
+          de sitios web profesionales. </p>
+      </div>
+      <div class="nosotros-geinz">
+        <img src="img/quienes-somos.png" alt="">
+      </div>
+      <div class="sliders">
+        <div class="slide-track">
+          <div class="slide">
+            <h1>Emprende</h1>
+          </div>
+          <div class="slide">
+            <h1>Crea</h1>
+          </div>
+          <div class="slide">
+            <h1>Diseña</h1>
+          </div>
+          <div class="slide">
+            <h1>Anima</h1>
+          </div>
+          <div class="slide">
+            <h1>Desarrola</h1>
+          </div>
+          <div class="slide">
+            <h1>Inova</h1>
+          </div>
+          <div class="slide">
+            <h1>responsive</h1>
+          </div>
+
+          <div class="slide">
+            <h1>Desing</h1>
+          </div>
+          <div class="slide">
+            <h1>Potencia</h1>
+          </div>
+          <div class="slide">
+            <h1>SEO</h1>
+          </div>
+          <div class="slide">
+            <h1>Emprende</h1>
+          </div>
+          <div class="slide">
+            <h1>Diseña</h1>
+          </div>
+          <div class="slide">
+            <h1>Inova</h1>
+          </div>
+          <div class="slide">
+            <h1>Crece</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plantillas" id="plantillasid">
+      <div class="title-plantillas">
+        <h1 class="textomostra">Plantillas</h1>
+      </div>
+      <div class="parrafo-plantillas">
+        <p class="textomostra">En Geinz, ofrecemos una amplia selección de plantillas de diseño web, todas actualizadas hasta la fecha de
+          2023. Nuestra colección incluye las más modernas y funcionales, diseñadas para brindar una experiencia
+          excepcional a los usuarios que visiten tu sitio web. Con interfaces de usuario cuidadosamente diseñadas,
+          garantizamos que tu presencia en línea sea atractiva y a la vez intuitiva, lo que te permitirá generar una
+          mayor
+          interacción y visualización con tus usuarios.</p>
+      </div>
+      <div class="contenedor-plantillas" id="contenedor-plantillas">
+        <img src="img/sitio1.png" alt="">
+        <img src="img/sitio2.png" alt="">
+        <img src="img/sitio3.png" alt="">
+        <img src="img/sitio4.png" alt="">
+        <img src="img/sitio5.png" alt="">
+        <img src="img/sitio6.png" alt="">
+      </div>
+
+      <div class="boton-planitllas">
+        <button>Echar un vistazo</button>
+      </div>
+    </section>
+  </section>
+
+  <section class="grid">
+    <div class="icon1"></div>
+    <div class="icon2"></div>
+    <div class="icon3"></div>
+  </section>
+  <section class="general-planes" id="planesid">
+    <section class="crea">
+      <div class="crea-title">
+        <h1>Crea tu marca con Geinz</h1>
+        <p>
+          Ofrecemos todo lo que tu emprese nacesita par ser vista por tus
+          clientes
+        </p>
+      </div>
+    </section>
+
+    <section id="planes">
+      <section class="planes">
+        <div class="planA" id="caracteristicas">
+          <div class="caracteristicas-planA">
+            <h1>Basico</h1>
+            <p>Pago unico 1 mantenimiento al sitio web en caso de errores</p>
+            <div class="price">
+              <h2>S/300 - S/400</h2>
+            </div>
+            <h3>X Responsive</h3>
+            <h3>&#10003; Estructura simple</h3>
+            <h3>X Estructura media</h3>
+            <h3>X Estructura anvazada</h3>
+            <h3>X Gestion de contenido</h3>
+            <h3>X Animaciones basicas</h3>
+            <h3>X Perzonalizacion de contenido</h3>
+            <h3>X Experiencia Ux/UI</h3>
+            <h3>Tiempo de desarrollo 1 semana</h3>
+            <h3>X Contenido actualizable</h3>
+            <h3>X Diseño personalizado</h3>
+            <h3>X Data base</h3>
+            <h3>X Conexion entre api</h3>
+
+            <button>Cotizar ahora</button>
+          </div>
+        </div>
+        <div class="planB" id="caracteristicas">
+          <div class="caracteristicas-planA">
+            <h1>Intermedio</h1>
+            <p>Pago unico 1 mantenimiento al sitio web en caso de errores</p>
+            <div class="price">
+              <h2>S/600 - S/900</h2>
+            </div>
+
+            <h3>&#10003; Responsive</h3>
+            <h3>X Estructura simple</h3>
+            <h3>&#10003; Estructura media</h3>
+            <h3>X Estructura anvazada</h3>
+            <h3>&#10003; Gestion de contenido</h3>
+            <h3>&#10003; Animaciones basicas</h3>
+            <h3>X Perzonalizacion de contenido</h3>
+            <h3>&#10003; Experiencia Ux/UI media</h3>
+            <h3>Tiempo de desarrollo 2 semana - 3semanas</h3>
+            <h3>&#10003; Contenido actualizable</h3>
+            <h3>&#10003; Diseño personalizado medio</h3>
+            <h3>X Data base</h3>
+            <h3>X Conexion entre api</h3>
+            <h3></h3>
+
+            <button>Cotizar ahora</button>
+          </div>
+        </div>
+        <div class="planC" id="caracteristicas">
+          <div class="caracteristicas-planA">
+            <h1>Avanzado</h1>
+            <p>Pago unico 3 mantenimiento al sitio web en caso de errores</p>
+
+            <div class="price">
+              <h2>S/1500 - S/3000</h2>
+            </div>
+
+            <h3>&#10003; Responsive</h3>
+            <h3>X Estructura simple</h3>
+            <h3>X Estructura media</h3>
+            <h3>&#10003; Estructura anvazada</h3>
+            <h3>&#10003; Gestion de contenido</h3>
+            <h3>&#10003; Animaciones avanzadas</h3>
+            <h3>&#10003; Perzonalizacion de contenido</h3>
+            <h3>&#10003; Experiencia Ux/UI avanzado</h3>
+            <h3>Tiempo de desarrollo 4 semana - 6semanas</h3>
+            <h3>&#10003; Contenido actualizable</h3>
+            <h3>&#10003; Diseño personalizado avanzado</h3>
+            <h3>&#10003; Data base</h3>
+            <h3>&#10003; Conexion entre api</h3>
+
+            <button>Cotizar ahora</button>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="javasCript/index.js"></script>
+</body>
+
+</html>
